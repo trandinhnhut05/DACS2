@@ -1,0 +1,172 @@
+@media only screen and (max-width: 46.1875em) {
+    .radio-input span {
+        font-size: 10px;
+        font-family: Arial;
+        font-weight: 520;
+    }
+    .radio-input {
+        --container_width: 150px;
+        height: 30px;
+    }
+    #main {
+        height: 90vh;
+    }
+    #box {
+        width: 100%;
+        margin: 50px auto;
+        float: none;
+        width: 95%;
+    }
+    table {
+        margin-left: 0;
+        margin-top: 0;
+        width: 95%;
+    }
+    .nhap {
+     width: 80%;
+    }
+    .goiY {
+        font-size: 10px;
+    }
+    .diaChi{
+        width: 80%;
+        height: 30px;
+        padding-left: 5px;
+    }
+    #ngaydi {
+        width: 40%;
+        height: 30px;
+        padding-left: 5px;
+        margin-right: auto;
+    }
+    #ngayve {
+        width: 40%;
+        height: 30px;
+        padding-left: 5px;
+    }
+    .tuoi {
+        width: 40%;
+        height: 30px;
+    }
+    .all_box {
+        width: 95%;
+    }
+    #bg_hotel {
+        height: 80vh;
+      
+    }
+    .pic_partner td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sug-partner {
+        padding: 0px 60px;
+    }
+ 
+    .pic_partner {
+        right: auto;
+    }
+ 
+    .pic_partner td {
+        width: auto;
+    }
+    .pic_partner tr {
+        height: auto;
+    }
+ 
+ }
+ /*tablet*/
+ @media only screen and (min-width: 46.25em) and (max-width:63.9375em) {
+    #box {
+        width: 550px;
+        margin: 20%;
+        min-height: auto;
+    }
+    #box table {
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+    .pic_partner {
+        justify-content: center;
+    }
+    #bg_hotel {
+        height: 80vh;
+    }
+    
+ }
+ /*mobie and tablet*/
+ @media only screen and (max-width:63.9375em) {
+    .table_hotel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #title {
+        width: auto;
+        height: auto; 
+        float: none;
+        margin: 0px auto;
+    }
+    .sug_hotel {
+        padding: 0px 20px;
+    }
+    .container-se {
+        width: auto;
+    }
+    .sug-partner {
+        flex-direction: column;
+    }
+    .introduct-par {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+  
+    #sub {
+        float: none;
+    }
+    
+ }
+ /*mobie and tablet*/
+ @media only screen and (max-width:63.9375em) {
+    .hangbay {
+       width: auto;
+       height: auto;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+ 
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     .sug-partner {
+         flex-direction: column;
+         align-items: center;
+     }
+ 
+     .introduct-par {
+         text-align: center;
+         padding: 10px;
+     }
+ 
+     .introduct-par h2 {
+         font-size: 20px;
+     }
+ 
+     .introduct-par p {
+         font-size: 14px;
+     }
+ 
+     .pic_partner {
+         margin-bottom: 20px;
+     }
+ }

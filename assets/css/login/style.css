@@ -1,0 +1,191 @@
+body {
+    background-image: url("https://wall.vn/wp-content/uploads/2020/04/cau-rong-da-nang.jpg");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+* {
+    box-sizing: border-box;
+}
+h1 {   
+    font-weight: bold;
+    margin: 0;
+}
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+span {
+    font-size: 12px;
+}
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px 0;
+    
+}
+.container {
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: "Montserrat",sans-serif;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+.overlay-container {
+    display: none;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.sign-up-container {
+    right: 0;
+    width: 50%;
+    z-index: 1;
+}
+.form-container form {
+    height: 100%;
+    background: #fff;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-container {
+    margin: 15px 0;
+}
+.social-container a {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.form-container input {
+    width: 100%;
+    background: #eee;
+    border: none;
+    box-shadow: 0px 0px 1px 1px #ccc;
+    padding: 12px 15px;
+    margin: 8px 0;
+}
+button {
+    background-color: #5da5ef;
+    background-image: linear-gradient(254deg, #5da5ef 0%, #E0C3FC 100%);
+    color: #fff;
+    border: 1px solid #ff4b2b;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+button:active {
+    transform: scale(0.95);
+}
+button:focus {
+    outline: none;
+}
+button.sign {
+    background: transparent;
+    border-color: #fff;
+}
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+}
+.overlay-container {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+.overlay {
+    position: relative;
+    height: 100%;
+    width: 200%;
+    left: -100%;
+    
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%, #69c4e9 100%);
+
+    color:#fff ;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out; 
+} 
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+}   
+.overlay-right {
+    right: 0;
+    transform: translateY(0);
+}
+.overlay-left {
+    transform: translateY(-20%);
+    top: 20%;
+}
+.container.right-panel-active {
+    & .sign-in-container {
+        transform: translatey(100%);
+    }
+    & .overlay-container {
+        transform: translateX(-100%);
+    }
+}
+.container.container.right-panel-active {
+    & .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+
+    }
+    & .overlay {
+        transform: translateX(50%);
+    }
+    & .overlay-right {
+        transform: translateY(20%);
+    }
+}
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+    display: block;
+}
